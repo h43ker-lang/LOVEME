@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Do You Love Me?</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Comic Sans MS', cursive;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #ffc0cb, #ffe4e1);
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #d63384;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 2px #fff;
+    }
+
+    .btns {
+      display: flex;
+      gap: 20px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 1.5rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #yes {
+      background-color: #ff69b4;
+      color: white;
+    }
+
+    #no {
+      background-color: #f8d7da;
+      color: #721c24;
+      position: absolute;
+    }
+
+    .message {
+      margin-top: 20px;
+      font-size: 2rem;
+      color: #ff1493;
+      display: none;
+    }
+
+    /* Hearts animation */
+    .hearts {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: float 10s linear infinite;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    /* Teddy bear */
+    .teddy {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 120px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Do you love me? 💖</h1>
+  <div class="btns">
+    <button id="yes">Yes</button>
+    <button id="no">No</button>
+  </div>
+  <div class="message" id="msg">I love you too ❤️</div>
+
+  <!-- Hearts animation container -->
+  <div class="hearts" id="hearts"></div>
+
+  <!-- Teddy bear image -->
+  <img src="https://i.ibb.co/wrRDBB7/teddy.png" alt="Teddy" class="teddy"/>
+
+  <script>
+    const yesBtn = document.getElementById('yes');
+    const noBtn = document.getElementById('no');
+    const msg = document.getElementById('msg');
+
+    yesBtn.addEventListener('click', () => {
+      msg.style.display = 'block';
+    });
+
+    noBtn.addEventListener('mouseover', () => {
+      const x = Math.random() * (window.innerWidth - noBtn.clientWidth);
+      const y = Math.random() * (window.innerHeight - noBtn.clientHeight);
+      noBtn.style.left = `${x}px`;
+      noBtn.style.top = `${y}px`;
+    });
+
+    // Generate floating hearts
+    const heartsContainer = document.getElementById('hearts');
+    for (let i = 0; i < 25; i++) {
+      let heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
+      heartsContainer.appendChild(heart);
+    }
+  </script>
+</body>
+</html>
