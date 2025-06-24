@@ -3,319 +3,270 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pyar To Main Bhi Karta Hu</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <title>Our Amazing Team</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        :root {
-            --primary: #ff6b6b;
-            --secondary: #ff8e8e;
-            --dark: #4a4a4a;
-            --light: #f9f9f9;
-            --accent: #ffb8b8;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&family=Montserrat:wght@400;600&display=swap');
         
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.6;
-            min-height: 100vh;
-            background: linear-gradient(-45deg, #fff1f1, #ffebeb, #f5f5ff, #f0f0ff);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-            padding: 0 20px;
-        }
-        
-        @keyframes gradientBG {
-            0% {background-position: 0% 50%;}
-            50% {background-position: 100% 50%;}
-            100% {background-position: 0% 50%;}
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 30px;
-            background-color: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .container::before {
-            content: "";
-            position: absolute;
-            top: -100px;
-            right: -100px;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background-color: rgba(255, 182, 182, 0.15);
-            z-index: -1;
-        }
-        
-        h1 {
-            font-family: 'Dancing Script', cursive;
-            font-size: 3rem;
-            color: var(--primary);
-            text-align: center;
-            margin-bottom: 30px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
-        .flower-decoration {
-            text-align: center;
-            margin: 20px 0;
-            font-size: 1.5rem;
-        }
-        
-        .heart-divider {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 40px 0;
-        }
-        
-        .heart {
-            width: 60px;
-            height: 60px;
-            background-color: var(--primary);
-            transform: rotate(45deg);
-            position: relative;
-            animation: heartbeat 1.5s infinite;
-        }
-        
-        .heart::before,
-        .heart::after {
-            content: "";
-            width: 60px;
-            height: 60px;
-            background-color: var(--primary);
-            border-radius: 50%;
-            position: absolute;
-        }
-        
-        .heart::before {
-            top: -30px;
-            left: 0;
-        }
-        
-        .heart::after {
-            top: 0;
-            left: -30px;
-        }
-        
-        @keyframes heartbeat {
-            0% {transform: rotate(45deg) scale(1);}
-            25% {transform: rotate(45deg) scale(1.1);}
-            50% {transform: rotate(45deg) scale(1);}
-            75% {transform: rotate(45deg) scale(1.1);}
-            100% {transform: rotate(45deg) scale(1);}
-        }
-        
-        .message-section {
-            margin: 40px 0;
-            padding: 20px;
-            border-radius: 15px;
-            background-color: rgba(255, 235, 235, 0.5);
-            border: 1px solid var(--accent);
-            transition: all 0.3s ease;
-        }
-        
-        .message-section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(255, 107, 107, 0.1);
-        }
-        
-        p {
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-            text-align: justify;
-        }
-        
-        .highlight {
-            color: var(--primary);
-            font-weight: 600;
-        }
-        
-        .love-button {
-            display: block;
-            margin: 40px auto;
-            padding: 12px 25px;
-            background-color: var(--primary);
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
             color: white;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+            min-height: 100vh;
+            overflow-x: hidden;
         }
         
-        .love-button:hover {
-            background-color: #ff5252;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.6);
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
         }
         
-        .confession-result {
+        .main-title {
+            font-size: 4rem;
             text-align: center;
-            font-size: 1.3rem;
-            margin-top: 30px;
-            min-height: 100px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 1s ease;
+            margin: 2rem 0;
+            background: linear-gradient(to right, #ff4e50, #f9d423);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 20px rgba(249, 212, 35, 0.3);
+            animation: glow 2s ease-in-out infinite alternate;
         }
         
-        .flower {
-            position: fixed;
-            pointer-events: none;
-            opacity: 0;
-            animation: fall linear forwards;
-            z-index: 100;
-        }
-        
-        @keyframes fall {
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px rgba(249, 212, 35, 0.5);
+            }
             to {
-                top: 100%;
-                opacity: 1;
+                text-shadow: 0 0 20px rgba(249, 212, 35, 0.8), 0 0 30px rgba(249, 212, 35, 0.6);
             }
         }
         
-        .interactive-section {
+        .team-container {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
-            margin: 30px 0;
+            gap: 3rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         
-        .emoji-button {
-            background: none;
-            border: 2px solid var(--accent);
+        .team-card {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+        
+        .pulse {
+            position: absolute;
+            width: 100%;
+            height: 100%;
             border-radius: 50%;
-            width: 60px;
-            height: 60px;
+            background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 70%);
+            animation: pulse 3s infinite;
+            z-index: -1;
+            opacity: 0;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.2;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+        
+        .name {
             font-size: 2rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            z-index: 2;
         }
         
-        .emoji-button:hover {
-            transform: scale(1.2);
-            background-color: var(--accent);
+        .role {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: #ccc;
         }
         
-        footer {
+        .description {
             text-align: center;
-            margin-top: 50px;
-            color: var(--dark);
+            margin-bottom: 2rem;
             font-size: 0.9rem;
-            padding: 20px;
+            color: #aaa;
+        }
+        
+        .percentage {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(to right, #a1ffce, #faffd1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: bounce 1.5s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .decoration {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            z-index: -1;
+            animation: float 6s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            25% {
+                transform: translate(10px, 10px) rotate(5deg);
+            }
+            50% {
+                transform: translate(0, 20px) rotate(0deg);
+            }
+            75% {
+                transform: translate(-10px, 10px) rotate(-5deg);
+            }
+        }
+        
+        .rings {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border: 2px dashed rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            z-index: -1;
+            animation: rotate 15s infinite linear;
+        }
+        
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5rem;
+            }
+            .team-card {
+                width: 100%;
+                max-width: 350px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Pyar To Main Bhi Karta Hu</h1>
-        
-        <div class="flower-decoration">✿ ❀ ✿ ❁ ✿</div>
-        
-        <div class="message-section">
-            <p><span class="highlight">प्यार तो मैं भी करता हूँ, पर बोलने से डरता हूँ...</span> क्योंकि डर लगता है कि अगर हकीकत में बदल गया तो? अगर मेरी बातों का अर्थ ही बदल गया तो?</p>
-            <p>कभी-कभी लगता है कि खामोशी ही बेहतर है... इस डर में कि शायद मेरी आवाज़ तुम तक वैसे ना पहुँचे जैसा मैं चाहता हूँ।</p>
-            <p>लेकिन आज, इन पलों में, मैं यह डर छोड़कर तुमसे बस इतना कहना चाहता हूँ — <span class="highlight">"तुम मेरे लिए बहुत खास हो।"</span> ❤️</p>
+    <h1 class="main-title">OUR AMAZING TEAM</h1>
+    
+    <div class="team-container">
+        <!-- Host Card -->
+        <div class="team-card">
+            <div class="pulse"></div>
+            <div class="decoration" style="top: -30px; left: -30px; background: rgba(255, 78, 80, 0.1); width: 150px; height: 150px;"></div>
+            <div class="decoration" style="bottom: -30px; right: -30px; background: rgba(249, 212, 35, 0.1); width: 150px; height: 150px;"></div>
+            <div class="rings" style="top: 20px; right: 20px;"></div>
+            <div class="rings" style="bottom: 20px; left: 20px; animation-direction: reverse;"></div>
+            
+            <h2 class="name">TUSHAR</h2>
+            <p class="role">THE HOST</p>
+            <p class="description"> The visionary behind our success.</p>
+            <p class="percentage"> HOST </p>
         </div>
         
-        <div class="heart-divider">
-            <div class="heart"></div>
+        <!-- Developer Card -->
+        <div class="team-card">
+            <div class="pulse" style="animation-delay: 0.5s"></div>
+            <div class="decoration" style="top: -20px; right: -20px; background: rgba(79, 172, 254, 0.1);"></div>
+            <div class="decoration" style="bottom: -20px; left: -20px; background: rgba(0, 242, 254, 0.1);"></div>
+            <div class="rings" style="top: 30px; left: 30px;"></div>
+            <div class="rings" style="bottom: 30px; right: 30px; animation-duration: 20s; animation-direction: reverse;"></div>
+            
+            <h2 class="name">SOHEL</h2>
+            <p class="role">THE DEVELOPER</p>
+            <p class="description">Coding wizard who transforms visions into reality with precision and innovation.</p>
+            <p class="percentage">100% DEDICATION</p>
         </div>
         
-        <div class="interactive-section">
-            <button class="emoji-button" onclick="showReaction('❤️')">❤️</button>
-            <button class="emoji-button" onclick="showReaction('😊')">😊</button>
-            <button class="emoji-button" onclick="showReaction('🥰')">🥰</button>
-            <button class="emoji-button" onclick="showReaction('✨')">✨</button>
+        <!-- Manager Card -->
+        <div class="team-card">
+            <div class="pulse" style="animation-delay: 1s"></div>
+            <div class="decoration" style="top: -40px; left: 50%; margin-left: -20px; background: rgba(161, 255, 206, 0.1); width: 200px; height: 200px;"></div>
+            <div class="rings" style="top: 50%; left: 50%; margin: -40px 0 0 -40px; animation-duration: 25s;"></div>
+            <div class="rings" style="top: 50%; left: 50%; margin: -30px 0 0 -30px; width: 60px; height: 60px; border-width: 1px; animation-duration: 30s; animation-direction: reverse;"></div>
+            
+            <h2 class="name">ROHIT</h2>
+            <p class="role">THE MANAGER</p>
+            <p class="description">Leading with strategy and experience to ensure everything runs smoothly.</p>
+            <p class="percentage">100% LEADERSHIP</p>
         </div>
-        
-        <button class="love-button" onclick="confessLove()">Samjhe Kya?</button>
-        
-        <div class="confession-result" id="confessionResult"></div>
     </div>
     
-    <footer>
-        Made with ❤️ | क्योंकि प्यार डरता नहीं, बस थोड़ा झिझकता है...
-    </footer>
-    
     <script>
-        function confessLove() {
-            const resultDiv = document.getElementById('confessionResult');
-            resultDiv.innerHTML = `
-                <div>
-                    <p>तुम्हारी आँखों में मेरी दुनिया बसती है,<br>
-                    तुम्हारी मुस्कान मेरे दिन को रोशन करती है,<br>
-                    <span style="color: #ff6b6b; font-weight: bold;">प्यार तो मैं भी करता हूँ, और आज यह डर छोड़कर बोलता हूँ... ❤️</span></p>
-                </div>
-            `;
-            resultDiv.style.opacity = '1';
+        // Additional interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.team-card');
             
-            // Create flower fall effect
-            createFlowerFalls();
-            
-            // Change background animation
-            document.body.style.animation = "gradientBG 5s ease infinite";
-        }
-        
-        function showReaction(emoji) {
-            const resultDiv = document.getElementById('confessionResult');
-            resultDiv.innerHTML = `<div style="font-size: 4rem;">${emoji}</div>`;
-            resultDiv.style.opacity = '1';
-            
-            setTimeout(() => {
-                resultDiv.style.opacity = '0';
-                setTimeout(() => {
-                    resultDiv.innerHTML = '';
-                }, 1000);
-            }, 1500);
-        }
-        
-        function createFlowerFalls() {
-            const flowers = ['🌸', '🌹', '🌺', '🌼', '🌷', '💮', '🏵️'];
-            const container = document.querySelector('.container');
-            
-            // Clear previous flowers
-            document.querySelectorAll('.flower').forEach(el => el.remove());
-            
-            // Create 50 falling flowers
-            for (let i = 0; i < 50; i++) {
-                const flower = document.createElement('div');
-                flower.className = 'flower';
-                flower.innerHTML = flowers[Math.floor(Math.random() * flowers.length)];
+            cards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+                    const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+                    card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+                });
                 
-                // Random position and animation duration
-                const left = Math.random() * 100;
-                const duration = Math.random() * 3 + 2;
-                const delay = Math.random() * 5;
-                const size = Math.random() * 20 + 10;
+                card.addEventListener('mouseenter', () => {
+                    card.style.transition = 'none';
+                });
                 
-                flower.style.left = `${left}%`;
-                flower.style.top = `-50px`;
-                flower.style.fontSize = `${size}px`;
-                flower.style.animationDuration = `${duration}s`;
-                flower.style.animationDelay = `${delay}s`;
-                
-                document.body.appendChild(flower);
-            }
-        }
+                card.addEventListener('mouseleave', () => {
+                    card.style.transition = 'transform 0.5s ease';
+                    card.style.transform = 'rotateY(0deg) rotateX(0deg) translateY(-10px)';
+                });
+            });
+        });
     </script>
 </body>
 </html>
+
