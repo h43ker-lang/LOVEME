@@ -14,8 +14,78 @@
             color: white;
             min-height: 100vh;
             overflow-x: hidden;
+            position: relative; /* Added for absolute positioning of background text */
         }
         
+        .background-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 10rem; /* Adjust size as needed */
+            color: rgba(255, 255, 255, 0.1); /* Light color for background */
+            text-align: center;
+            white-space: nowrap;
+            animation: fadeIn 5s infinite alternate;
+            z-index: 0; /* Ensure it's behind other content */
+        }
+
+        .bottom-text {
+            position: absolute;
+            bottom: 20px; /* Adjust distance from the bottom as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 5rem; /* Adjust size as needed */
+            color: rgba(255, 255, 255, 0.1); /* Light color for background */
+            text-align: center;
+            white-space: nowrap;
+            animation: fadeIn 5s infinite alternate;
+            z-index: 0; /* Ensure it's behind other content */
+        }
+
+        .moving-banner {
+            position: absolute;
+            font-size: 3rem; /* Adjust size as needed */
+            color: rgba(255, 255, 255, 0.1); /* Light color for background */
+            text-align: center;
+            white-space: nowrap;
+            z-index: 0; /* Ensure it's behind other content */
+            animation: moveRandomly 10s linear infinite; /* Adjust duration as needed */
+        }
+
+        @keyframes moveRandomly {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(100px, 50px);
+            }
+            50% {
+                transform: translate(-100px, 100px);
+            }
+            75% {
+                transform: translate(50px, -50px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1.05);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
         h1, h2, h3 {
             font-family: 'Poppins', sans-serif;
             text-transform: uppercase;
@@ -50,6 +120,8 @@
             padding: 2rem;
             max-width: 1200px;
             margin: 0 auto;
+            position: relative; /* Ensure team cards are above background text */
+            z-index: 1; /* Ensure team cards are above background text */
         }
         
         .team-card {
@@ -199,6 +271,7 @@
     </style>
 </head>
 <body>
+    <div class="background-text">We meet soon</div>
     <h1 class="main-title">OUR AMAZING TEAM</h1>
     
     <div class="team-container">
@@ -243,6 +316,9 @@
             <p class="percentage">100% LEADERSHIP</p>
         </div>
     </div>
+
+    <div class="bottom-text">We meet soon</div>
+    <div class="moving-banner">We meet soon</div>
     
     <script>
         // Additional interactive elements
@@ -269,4 +345,3 @@
     </script>
 </body>
 </html>
-
